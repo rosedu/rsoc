@@ -8,6 +8,13 @@ This is a repository that holds the static files for http://soc.rosedu.org/.
 python -m SimpleHTTPServer
 ```
 
+## For deployment
+
+```
+pip install fabric
+fab deploy
+```
+
 # Files
 
 * `index.php` redirects to the current year
