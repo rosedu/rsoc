@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie ie7"> <![endif]--> 
+<!--[if IE 8 ]>    <html lang="en" class="ie ie8"> <![endif]--> 
+<!--[if IE 9 ]>    <html lang="en" class="ie ie9"> <![endif]--> 
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->  
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Summer of Code</title>
+    <link rel="stylesheet" href="../ui/stylesheets/reset.css" type="text/css" />
+    <link rel="stylesheet" href="../ui/stylesheets/screen.css" type="text/css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet' type='text/css'>
+  </head>
+
+   <body>
+    <div id="header">
+    <a href="/"><h1 id="logo-soc">Summer of Code</h1></a>
+      <div class="past_events">
+        <h2>Past events</h2>
+        <nav>
+          <a href="/2012" title="">2012</a>
+          <a href="/2011" title="">2011</a>
+          <a href="/2010" title="">2010</a>
+          <a href="/2009" title="">2009</a>
+          <a href="/2008" title="">2008</a>
+        </nav>
+      </div>
+    </div>
+    <div class="slice inverted">
+      <div class="priority_column">
+        <section class="project">
+          <p><img src="../ui/images/firefox-large.png" alt="banner proiect" width="524" height="120px" /></p>
+          <h1>Mozilla Firefox</h1>
+          <h3>About</h3>
+	  <p><a title="Mozilla Firefox" href="http://www.mozilla.org/en-US/firefox/new/">Mozilla Firefox</a> is a free an open
+	  source browser developed by the Mozilla Corporation. It uses Gecko as its layout engine. The networking module is called Necko.</p>
+
+	  <h3>Networking Dashboard</h3>
+	  <p>The Networking Dashboard is a project that is meant to offer the same functionality as chrome://net-internals.</p>
+
+	  <p><strong>Project</strong></p>
+	  <p>This project intends to develop the dashboard into a more complete and useful tool.
+	  The API currenly provides information regarding: Open Sockets, HTTP Connections, DNS Queries and WebSockets.</p>
+
+	  <p><strong>Tasks</strong></p>
+	  <ul class="enumerable">
+		  <li>Expose required information: Protocol version, Cache Status, Half Open Connections</li>
+		  <li>Implement diagnostic tools: Ping, DNS Lookup, URL Test, Proxy Settings</li>
+		  <li>Implement a debugging tool: Logging, Network events</li>
+	  </ul>
+
+	  <p><strong>More info</strong></p>
+	  <p><a href="https://wiki.mozilla.org/Necko/Dashboard">https://wiki.mozilla.org/Necko/Dashboard</a></br>
+	  <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=801202">https://bugzilla.mozilla.org/show_bug.cgi?id=801202</a></p>
+
+	  <p><strong>Required knowledge</strong></p>
+	  <ul class="enumerable">
+		  <li>Good knowledge of C and OOP (C++ recommended)</li>
+		  <li>Basic knowledge of HTML and JavaScript</li>
+	  </ul>
+
+	  <h3>Networking Telemetry</h3>
+	  <p>Networking Telemetry provides relevant feedback regarding Firefox's network performance.</p>
+
+	  <p><strong>Project</strong></p>
+	  <p>There are many things we would like to know about the internet, but our telemetry doesn't report information on all of them.
+	  For instance - how often is js/css pulled from the HEAD element and how often is it loaded in some other asynchronous manner?
+	  What are the relative wait times between those strategies?</p>
+
+	  <p><strong>Tasks</strong></p>
+	  <ul class="enumerable">
+		  <li>Implement telemetry reporting for the most important issues regarding networking performance.</li>
+	  </ul>
+
+	  <p><strong>More info</strong></p>
+	  <p><a href="https://wiki.mozilla.org/Telemetry">https://wiki.mozilla.org/Telemetry</a></br>
+	  <a href="https://metrics.mozilla.com/">https://metrics.mozilla.com/</a></p>
+
+	  <p><strong>Required knowledge</strong></p>
+	  <ul class="enumerable">
+		  <li>Good knowledge of C and OOP (C++ recommended)</li>
+		  <li>Basic knowledge of HTML and JavaScript</li>
+	  </ul>
+
+        </section>
+      </div>
+      <div class="aside_column">
+        <section class="metadata">
+          <h2>Mentors</h2>
+          <ul>
+            <li><a href="mailto:valentin.gosu@gmail.com">Valentin Goșu</a></li>
+          </ul>
+          <h2>Team</h2>
+          <ul>
+		<li>Robert Bîndar</li>
+		<li>Cătălin Iordache</li>
+	  </ul>
+        </section>
+      </div>
+    </div>
+    <div class="slice organisers">
+      <div class="made_by_rosedu">
+      
+      <div class="partners"> 
+        <h3>Partners</h3>
+        <p>
+          <a href="http://www.allevo.ro/">
+            <img src="../ui/images/logo-allevo.png" alt="Allevo Logo" />
+         </a>
+
+	 <a href="http://www.eaudeweb.ro/">
+            <img src="../ui/images/logo-edw.png" alt="Eau de Web Logo" />
+          </a>
+
+          <a href="http://myadobe.ro/">
+            <img src="../ui/images/logo-adobe.png" alt="Adobe Logo" />
+          </a>
+
+          <a href="http://www.stagiipebune.ro/">
+            <img src="../ui/images/logo-stagii.png" alt="Stagii pe Bune Logo" />
+         </a>
+
+        </p>
+      </div>
+
+      <div class="organizers">
+	<h3>Organizers</h3>
+        <p>
+          <a href="http://rosedu.org/">
+            <img src="../ui/images/logo-rosedu.png" alt="ROSEdu Logo" />
+          </a>
+        </p>
+      </div>
+
+      </div>
+    </div>
+    <div class="closer">
+      This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.<br />
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a>
+    </div>
+
+    <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-7579199-7']);
+    _gaq.push(['_setDomainName', 'rosedu.org']);
+    _gaq.push(['_trackPageview']);
+
+      (function() {
+         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+       })();
+
+    </script>
+
+  </body>
+</html>

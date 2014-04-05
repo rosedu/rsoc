@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie ie7"> <![endif]--> 
+<!--[if IE 8 ]>    <html lang="en" class="ie ie8"> <![endif]--> 
+<!--[if IE 9 ]>    <html lang="en" class="ie ie9"> <![endif]--> 
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->  
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>Summer of Code</title>
+    <link rel="stylesheet" href="../ui/stylesheets/reset.css" type="text/css" />
+    <link rel="stylesheet" href="../ui/stylesheets/screen.css" type="text/css" />
+
+    <link href='http://fonts.googleapis.com/css?family=Aldrich' rel='stylesheet' type='text/css'>
+  </head>
+
+   <body>
+    <div id="header">
+    <a href="/"><h1 id="logo-soc">Summer of Code</h1></a>
+      <div class="past_events">
+        <h2>Past events</h2>
+        <nav>
+          <a href="/2012" title="">2012</a>
+          <a href="/2011" title="">2011</a>
+          <a href="/2010" title="">2010</a>
+          <a href="/2009" title="">2009</a>
+          <a href="/2008" title="">2008</a>
+        </nav>
+      </div>
+    </div>
+    <div class="slice inverted">
+      <div class="priority_column">
+        <section class="project">
+          <p><img src="../ui/images/mailfilter-large.png" alt="banner proiect" width="524" height="120px" /></p>
+          <h1>Mail Filter</h1>
+	  <h3>About</h3>
+	  <p>Mail Filter is a Mail Transport Agent (MTA) framework. The main goal is to implement a protection 
+	  system against unsolicited or potentially harmful e-mail. However, its modular architecture makes Mail
+	  Filter suitable for a wide variety of applications that involve SMTP.</p>
+
+	  <p><strong>Features</strong></p>
+	  <ul class="enumerable">
+		  <li>Can talk to any server that "speaks" SMTP - Spamassassin and Clamav (and virtually any other 
+		  mail scanning software) can now be used with any SMTP server, without requiring special 
+		  modules.</li>
+		  <li>Proxy setup allows mail to be rejected right away when the recipient address is invalid (Mail 
+		  Filter doesn't queue messages), thus avoiding bounces when the envelope sender address is 
+		  forged.</li>
+		  <li>SQL logging allows for a wide variety of mail traffic analysis, ranging from basic search to 
+		  advanced reports.</li>
+	  </ul>
+
+	  <p>Mail Filter is written entirely in C and uses a very simple multi-process model for handling several 
+	  clients at the same time. Using a modular design, Mail Filter has an SMTP core and various modules 
+	  that handle distinct functionality: SMTP client, Spamassassin integration, Clamav integration, SQL 
+	  logging, etc.</p>
+
+	  <p>Each module can install its own handle in all points of the SMTP transaction and optionally force a 
+	  specific answer to the client.</p>
+
+	  <h3>Project Description</h3>
+
+	  <p><strong>Motivation</strong></p>
+	  <p>Currently all logic behind Mail Filter is hard-coded in the modules source code. This allows no user 
+	  (administrator) control over the filtering process. Advanced setups (such as skipping the Spamassassin 
+	  checks for some domains but only if they were authenticated with domain keys, while still going 
+	  through the Clamav module) are nearly impossible in the current design.</p>
+
+	  <p>Even if these advanced setups were possible, they would have involved a very complex configuration 
+	  file and very complicated code to act upon all the possible paths resulting from the various 
+	  configuration options.</p>
+
+	  <p>In conclusion, configuration-driven behavior is not scalable and flexible enough.</p>
+
+	  <p><strong>Project Goal</strong></p>
+	  <p>The project goal is to provide the user (administrator) with the most flexible means of controlling the 
+	  Mail Filter behavior. This can be achieved by integrating a scripting language into Mail Filter and 
+	  moving all the logic from the various modules to the script. This way the behavior can be changed and 
+	  customized without needing to understand the C language and the Mail Filter internals and without recompiling Mail Filter.</p>
+
+	  <p>The idea is not new. It has been successfully applied on much more mature projects such as Opensips 
+	  (www.opensips.org). However, instead of inventing a new language (as they did), the main focus 
+	  should be on integrating a well known and widely used language such as JavaScript.</p>
+
+	  <p>There are many open-source JavaScript engine implementations, so there is no need to create a new 
+	  one. It's just about studying them and choosing the one that's easiest to use and integrate with Mail 
+	  Filter.</p>
+
+	  <p>All the SMTP (server and client) protocol handling should remain inside the Mail Filter modules, as 
+	  well as the low-level integration with third-party applications such as Spamassassin and Clamav. The 
+	  JavaScript integration should provide an interface to this functionality by the means of some predefined
+	  objects, similar to the document and window objects in the web browser JavaScript environment.</p>
+
+	  <p>All the logic that is currently implemented inside the Mail Filter modules must be ported to JavaScript. 
+	  This will serve as a reference implementation for the Mail Filter users.</p>
+
+	  <p><strong>Required skills</strong></p>
+	  <ul class="enumerable">
+		  <li>C language: advanced</li>
+		  <li>POSIX programming (generic): intermediate</li>
+		  <li>POSIX sockets, process control, and pipes: intermediate</li>
+		  <li>JavaScript language: intermediate</li>
+		  <li>SMTP: beginner</li>
+	  </ul>
+
+	  </section>
+      </div>
+      <div class="aside_column">
+        <section class="metadata">
+          <h2>Mentors</h2>
+          <ul>
+		  <li><a href="mailto:radu.rendec@cloudbit.ro">Radu Rendec</a></li>
+		  <li><a href="mailto:ionut.nicu@cloudbit.ro">Ionuț Nicu</a></li>
+	  </ul>
+	  <h2>Repository</h2>
+	  <ul>
+		  <li><a href="https://github.com/mindbit/mailfilter/wiki">Github</a></li>
+	  </ul>
+          <h2>Team</h2>
+          <ul>
+		<li>None</li>
+	  </ul>
+        </section>
+      </div>
+    </div>
+    <div class="slice organisers">
+      <div class="made_by_rosedu">
+      
+      <div class="partners"> 
+        <h3>Partners</h3>
+        <p>
+          <a href="http://www.allevo.ro/">
+            <img src="../ui/images/logo-allevo.png" alt="Allevo Logo" />
+         </a>
+
+	 <a href="http://www.eaudeweb.ro/">
+            <img src="../ui/images/logo-edw.png" alt="Eau de Web Logo" />
+          </a>
+
+          <a href="http://myadobe.ro/">
+            <img src="../ui/images/logo-adobe.png" alt="Adobe Logo" />
+          </a>
+
+          <a href="http://www.stagiipebune.ro/">
+            <img src="../ui/images/logo-stagii.png" alt="Stagii pe Bune Logo" />
+         </a>
+
+        </p>
+      </div>
+
+      <div class="organizers">
+	<h3>Organizers</h3>
+        <p>
+          <a href="http://rosedu.org/">
+            <img src="../ui/images/logo-rosedu.png" alt="ROSEdu Logo" />
+          </a>
+        </p>
+      </div>
+
+      </div>
+    </div>
+    <div class="closer">
+      This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.<br />
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png" /></a>
+    </div>
+
+    <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-7579199-7']);
+    _gaq.push(['_setDomainName', 'rosedu.org']);
+    _gaq.push(['_trackPageview']);
+
+      (function() {
+         var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+       })();
+
+    </script>
+
+  </body>
+</html>
